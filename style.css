@@ -3,13 +3,45 @@ body {
     background-color: grey;
     text-align: center;
 }
+
+h1 {
+    padding: 0;
+}
 /* GRID STYLE */
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
 #container {    
     display: grid;
-    grid-template-columns: repeat(16,3fr);
-    grid-template-rows: repeat(16, 3fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
     width: 800px;
     height: 520px;
     border: 3px solid black;
     margin: 0 auto;
+    padding: 0;
+}
+.colorchange {
+    background-color: black;
+}
+
+/*  BUTTON AREA  */
+#btns {
+    padding-bottom: 1rem;
+}
+
+/*  BUTTONS  */
+.reset-btn {
+    color: black;
+    border: 0.1rem solid white;
+    padding: 0.8rem;
+    background: transparent;
+    border-radius: 1rem;
+}
+
+.reset-btn:hover {
+    background-color: black;
+    color: white;
+    border: 0.1rem solid black;
 }
