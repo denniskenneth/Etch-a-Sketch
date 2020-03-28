@@ -1,0 +1,15 @@
+
+body {
+    background-color: grey;
+    text-align: center;
+}
+/* GRID STYLE */
+#container {    
+    display: grid;
+    grid-template-columns: repeat(16,3fr);
+    grid-template-rows: repeat(16, 3fr);
+    width: 800px;
+    height: 520px;
+    border: 3px solid black;
+    margin: 0 auto;
+}
