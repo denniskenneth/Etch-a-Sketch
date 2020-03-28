@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
-const resetBtn = document.querySelector('.reset-btn')
+const resetBtn = document.querySelector('.reset-btn');
+const clearBtn = document.querySelector('.clear-btn');
 
 
 function mkGrid(size) {
@@ -15,8 +16,14 @@ function mkGrid(size) {
     makDiv.className = 'row';
     makDiv.setAttribute('style', 'border: 1px solid black');
     container.appendChild(makDiv);
+    makDiv.addEventListener('mouseenter', colorIn);
     }  
 }
+
+/*clearBtn.addEventListener('click', () => {
+    const clearRow = document.querySelectorAll('.row');
+    clearRow.forEach(div => div.style.backgroundcolor = null);
+});*/
 
 function clearGrid() {
     const getDiv = document.querySelectorAll('.row');
@@ -41,6 +48,14 @@ function gridReset() {
     changeColor();
 }
 
+
+function colorIn() {
+    let currentOpacity = +this.style.opacity;
+    if (currentOpacity < 1) currentOpacity += 0.1;
+    this.style.opacity = currentOpacity;
+  }
+
 mkGrid();
 changeColor();
 resetBtn.addEventListener('click', gridReset);
+//clearBtn.addEventListener('click', clearGrid);

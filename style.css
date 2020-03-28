@@ -1,6 +1,6 @@
 
 body {
-    background-color: grey;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -17,13 +17,14 @@ h1 {
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     width: 800px;
-    height: 520px;
-    border: 3px solid black;
+    height: 380px;
+    border: 3px solid #000000;
     margin: 0 auto;
     padding: 0;
 }
 .colorchange {
-    background-color: black;
+    background-color: #000000;
+    opacity: .1;
 }
 
 /*  BUTTON AREA  */
@@ -33,15 +34,31 @@ h1 {
 
 /*  BUTTONS  */
 .reset-btn {
-    color: black;
-    border: 0.1rem solid white;
+    color: #000000;
+    border: 0.1rem solid #ff1e56;
     padding: 0.8rem;
+    margin-right: 20px;
     background: transparent;
     border-radius: 1rem;
 }
 
 .reset-btn:hover {
-    background-color: black;
+    background-color: #ff1e56;
     color: white;
-    border: 0.1rem solid black;
+    border: 0.1rem solid #ff1e56;
 }
+
+/*.clear-btn {
+    color: #000000;
+    border: 0.1rem solid #ff1e56;
+    padding: 0.8rem;
+    margin-left: 20px;
+    background: transparent;
+    border-radius: 1rem;
+}
+
+.clear-btn:hover {
+    background-color: #ff1e56;
+    color: white;
+    border: 0.1rem solid #ff1e56;
+}*/
